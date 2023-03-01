@@ -93,10 +93,21 @@ def insertionSort(arr):
         j = i-1
         while j >= 0 and arr[j] > curentValue:
             arr[j+1] = arr[j]
-            n+=1
+            n += 1
             j-+1
         arr[j+1] = curentValue
     print(n)
 
 
 insertionSort(a)
+x = a[len(a)-1]
+for i in range(4, 0, -1):  # looping in reverse direction
+    # finding the lowest value
+    if(a[i-1] > x):
+        a[i] = a[i-1]
+        print(*a)
+    else:
+        a[i] = x
+        print(*a)
+
+insertionSort1(5, a)
